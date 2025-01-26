@@ -91,14 +91,17 @@ input {
     color: #000; /* Màu chữ đen */
 }
 
+
 /*background animation*/
 
 .box {
-    width: 120%;
-    height: 120%;
+    width: 16.8%;
+    height: 200%;
+    left: -20%;
     display: none;
     position: absolute;
-    transform: rotate(135deg);
+    transform: rotate(45deg);
     background-color: white;
     color: white;
+    border: red solid ;
 }

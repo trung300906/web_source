@@ -1,12 +1,19 @@
 const button1 = document.querySelector('.button1');
 const login_page = document.querySelector('.login-container')
-const background_animation = document.querySelector('.box');
+const background_animation = document.querySelectorAll('.box');
 button1.addEventListener('click', () => {
     console.log('Nút đã được click!');
     button1.classList.add('active');
     setTimeout(() => {
         button1.style.display = 'none';
-        background_animation.style.display = 'flex';
+        background_animation.forEach((box, index) => {
+            box.style.display = 'flex';
+            box.style.left = `${(index * 24) - 17.888888888888 }%`;
+            
+        });
+        //background_animation.forEach(box => {
+            //box.style.display = 'flex';
+        //})
         login_page.style.display= 'inline-block';
         login_page.offsetHeight;
         login_page.style.transition = 'opacity 1s ease-in-out';
