@@ -11,9 +11,6 @@ button1.addEventListener('click', () => {
             box.style.left = `${(index * 24) - 17.888888888888 }%`;
             
         });
-        //background_animation.forEach(box => {
-            //box.style.display = 'flex';
-        //})
         login_page.style.display= 'inline-block';
         login_page.offsetHeight;
         login_page.style.transition = 'opacity 1s ease-in-out';
@@ -26,9 +23,44 @@ const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
 const errorMessage = document.querySelector('#error-message');
 
-// login animation
+// login information
 const login_information = [
     {username:'admin', password:'admin'},
+    {username:'levienbang', password:'18012006'},
+    {username:'phamvuhoangbinh', password:'29102006'},
+    {username:'nguyentridung', password:'14052006'},
+    {username:'phamtiendung', password:'16032006'},
+    {username:'vodinhduong', password:'10072006'},
+    {username:'nguyenhuutandat', password:'01022006'},
+    {username:'trannhathuonggiang', password:'12072006'},
+    {username:'truongquochai', password:'02062006'},
+    {username:'nguyenquochi', password:'18072006'},
+    {username:'nguyenthikimhieu', password:'12062006'},
+    {username:'nguyenthiminhhue', password:'08092006'},
+    {username:'nguyengiahuy', password:'16022006'},
+    {username:'luuhoangquockhanh', password:'03092006'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'},
+    {username:'admin', password:'admin'}
 ];
 
 //login process
@@ -41,9 +73,13 @@ login_button.addEventListener('click', () => {
         console.log('Đăng nhập thành công');
         errorMessage.style.display = 'none'; // Ẩn thông báo lỗi
         // Chuyển trang hoặc thực hiện hành động khác
+        login_page.style.transition = 'all 1s ease';
+        login_page.classList.add('disappear');
+        login_page.addEventListener('transitionend', () => {
+            login_page.style.display = 'none'; // Ẩn khung đăng nhập sau khi hiệu ứng hoàn tất
+        }, { once: true });
     } else {
         console.log('Tên đăng nhập hoặc mật khẩu không hợp lệ');
-        login_page.classList.add('active');
         errorMessage.style.display = 'block'; // Hiển thị thông báo lỗi
     }
 });

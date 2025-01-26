@@ -60,6 +60,7 @@ body {
     border: 2px solid #04AA6D;
     opacity: 0;
     transition: fadeIn 1s forwards;
+    transition-duration: 0.1s;
     position: relative;
 }
 .login_button {
@@ -73,6 +74,13 @@ body {
     background-color: #ff000d;
     color: white;
     transform: translateY(-5px);
+}
+.login-container.disappear {
+    padding: 60px 65px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    transform: scale(6);
+    opacity: 0;
 }
 .form-group {
     padding: 15px 20px;
@@ -93,7 +101,6 @@ input {
 
 
 /*background animation*/
-
 .box {
     width: 16.8%;
     height: 200%;
