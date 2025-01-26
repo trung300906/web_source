@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(0, 0, 0); /* Nền màu đen */
+    color: rgb(0, 0, 0); /* Chữ màu đen (không thấy được) */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+}
+
+/*button style*/
+.button {
+    display: inline-block;
+    border: solid;
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+    text-decoration: none;   
+    font-size: 20px;
+    transition-duration: 0.1s;
+    transition: all 1s ease;
+    margin: 40px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+}
+.button1:hover {
+    background-color: #ff000d;
+    color: white;
+    transform: translateY(-15px);
+}
+.button1.active{
+    padding: 30px 35px;
+    background-color: #414141;
+    color: white;
+    transform: scale(3);
+    opacity: 0;
+}
+
+/*login style*/
+.login-container {
+    background-color: #414141; 
+    padding: 30px 35px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #04AA6D;
+    opacity: 0;
+    transition: fadeIn 1s forwards;
+    position: relative;
+}
+.login_button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+    border-radius: 5px;
+    transition-duration: 0.1s;
+}
+.login_button:hover {
+    background-color: #ff000d;
+    color: white;
+    transform: translateY(-5px);
+}
+.form-group {
+    padding: 15px 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255); /* Màu chữ */
+}
+input {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #000; /* Màu chữ đen */
+}
+
+/*background animation*/
+
+.box {
+    width: 120%;
+    height: 120%;
+    display: none;
+    position: absolute;
+    transform: rotate(135deg);
+    background-color: white;
+    color: white;
+}

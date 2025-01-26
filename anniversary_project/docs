@@ -1,0 +1,15 @@
+mô tả ban đầu là...
+cái web sẽ có 1 black page
+sau đó click chuột
+và các dải màu sẽ tràn vào, mỗi dải màu sẽ gồm các bức hình đc scale theo tỉ lệ của chính bức hình đó
+và ở giữa sẽ có nút button start lớn
+khi bấm chuột vào nút start đó
+thực hiện đòng thời:
+các dải màu sẽ dạt ra các bên của nó (scale theo giữa màn hình)
+
+sau đó sẽ đưa xuống(sao cho smoothly) nhất có thể lần lượt các khung hình với mỗi bức hình cụ thể
+khi bấm vào bức hình nào thì nó sẽ hiện khung hình cùng note của bức hình đó
+cái nào xong thì sẽ biến mất vào kho store lưu trữ(để có thể xem lại(kho này sẽ lưu vĩnh viễn trên ổ đĩa người dùng))
+sau khi xem hết sẽ có phần quà bí mật
+mở ra thì sẽ có lời chúc 
+sau khi bấm chuột lần nữa thì sẽ tự động thoát web
