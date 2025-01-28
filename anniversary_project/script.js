@@ -1,15 +1,13 @@
 const button1 = document.querySelector('.button1');
 const login_page = document.querySelector('.login-container')
-const background_animation = document.querySelectorAll('.box');
+const backgroundAnimations = document.querySelectorAll('.box1, .box2, .box3, .box4, .box5, .box6, .box7');
 button1.addEventListener('click', () => {
     console.log('Nút đã được click!');
     button1.classList.add('active');
     setTimeout(() => {
         button1.style.display = 'none';
-        background_animation.forEach((box, index) => {
-            box.style.display = 'flex';
-            box.style.left = `${(index * 24) - 17.888888888888 }%`;
-            
+        backgroundAnimations.forEach((animation) => {
+            animation.style.display = 'block';
         });
         login_page.style.display= 'inline-block';
         login_page.offsetHeight;
