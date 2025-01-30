@@ -529,18 +529,6 @@
     'use strict';
 console.clear();
 
-document.addEventListener("DOMContentLoaded", function() { var message = document.getElementById('message'); message.style.opacity = 0; // Ban đầu opacity là 0 
-    setTimeout(function() { 
-        var fadeInEffect = setInterval(function() { 
-            if (message.style.opacity < 1) { 
-                message.style.opacity = parseFloat(message.style.opacity) + 0.01; // Tăng opacity từ 0 lên 1 
-                } 
-                else { 
-                    clearInterval(fadeInEffect); // Dừng lại khi opacity đạt 1 
-                } 
-            }, 30); // Thực hiện mỗi 30ms 
-        }, 50000); // 50 giây delay 
-}); 
 
 const IS_MOBILE = window.innerWidth <= 640;
 const IS_DESKTOP = window.innerWidth > 800;
