@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anniversary</title>
+    <style>
+        body {
+            background-color: rgb(255, 186, 252); /* Nền màu đen */
+            color: rgb(0, 0, 0); /* Chữ màu đen (không thấy được) */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #d32f2f;
+        }
+        .header_text {
+            font-size: 3em;
+            color: #d32f2f;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            border: solid;
+            color: white;
+            padding: 50px 60px;
+            text-align: center;
+            text-decoration: none;   
+            font-size: 20px;
+            transition-duration: 0.1s;
+            transition: all 1s ease;
+            margin: 40px 20px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .yes_button{
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 2px solid green;
+        }
+        .yes_button:hover{
+            background-color: pink;
+            color: while;
+            transform: translateY(-15px);
+        }
+        .no_button{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 2px solid green;
+        }
+        .no_button:hover {
+            background-color: gray;
+            color: white;
+            transform: translateY(15px)
+        }
+        .gif_container_1 img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .gif_container_2 img{
+            width: 100%; 
+            max-width: 500px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="display:flex">EM CÓ CHỊU VỀ CÙNG 1 NHÀ CÙNG ANH HEM?</h1>
+        <button class="button yes_button", onclick="handleyesfunction()">YES</button>
+        <button class="button no_button", onclick="handleNoClick()">NO</button>
+        <div class="gif_container_1">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF" style="display:inline-block">
+        </div>
+        <h1 class="header_text" style="display:none">I KNEW U WANT THAT <3</h1>
+        <div class="gif_container_2">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif" alt="Cute GIF" style="display:none">
+        </div>
+    </div>
+
+    <script>
+        const messages = [
+            "Are you sure?",
+            "Really sure??",
+            "Are you positive?",
+            "Pookie please...",
+            "Just think about it!",
+            "If you say no, I will be really sad...",
+            "I will be very sad...",
+            "I will be very very very sad...",
+            "Ok fine, I will stop asking...",
+            "Just kidding, say yes please! ❤️",
+            "really???????????????",
+            "thật à..... bùn lắm á....",
+            "hết bung eng được nè... bùn lắm á..."
+        ];
+        let messageIndex = 0;
+        function handleNoClick() {
+            const noButton = document.querySelector('.no_button');
+            const yesButton = document.querySelector('.yes_button');
+            noButton.textContent = messages[messageIndex];
+            messageIndex = (messageIndex + 1) % messages.length;
+            const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = `${currentSize * 1.75}px`;
+        }
+        function handleyesfunction(){
+            const noButton = document.querySelector('.no_button');
+            const yesButton = document.querySelector('.yes_button');
+            const giff = document.querySelector('.gif_container_1 img');
+            const header1 = document.querySelector('h1');
+            const header2 = document.querySelector('.header_text')
+            const giff_2 = document.querySelector('.gif_container_2 img');
+            noButton.style.display = 'none';
+            yesButton.style.display = 'none';
+            giff.style.display = 'none';
+            header1.style.display = 'none';
+            header2.style.display = 'flex';
+            giff_2.style.display = 'flex';
+        }
+    </script>
+</body>
